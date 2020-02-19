@@ -18,6 +18,7 @@ endif
 let b:elixir_no_expensive = 1
 
 " Include Elixir syntax highlighting
+let b:current_syntax = "slime"
 syn include @slimeElixirTop syntax/elixir.vim
 unlet! b:current_syntax
 " Include Haml syntax highlighting
@@ -100,3 +101,5 @@ hi def link slimeWrappedAttrsDelimiter     Delimiter
 hi def link slimeInlineTagChar             Delimiter
 
 let b:current_syntax = "slime"
+
+
