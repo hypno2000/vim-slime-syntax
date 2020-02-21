@@ -38,7 +38,7 @@ syn match   slimeDocTypeKeyword "^\s*\(doctype\)\s\+" nextgroup=slimeDocType
 syn keyword slimeTodo        FIXME TODO NOTE OPTIMIZE XXX contained
 syn keyword htmlTagName     contained script
 
-syn match slimeTag           "\w\+[><]*"         contained contains=htmlTagName nextgroup=@slimeComponent
+syn match slimeTag           "\w\+[><]*"    contained contains=htmlTagName nextgroup=@slimeComponent
 syn match slimeIdChar        "#{\@!"        contained nextgroup=slimeId
 syn match slimeId            "\%(\w\|-\)\+" contained nextgroup=@slimeComponent
 syn match slimeClassChar     "\."           contained nextgroup=slimeClass
@@ -81,7 +81,7 @@ syn match slimeIEConditional "\%(^\s*/\)\@<=\[\s*if\>[^]]*]" contained contained
 hi def link slimeAttrString                String
 hi def link slimeBegin                     String
 hi def link slimeClass                     Type
-hi def link slimeAttr                      Type
+hi def link slimeAttr                      Identifier
 hi def link slimeClassChar                 Type
 hi def link slimeComment                   Comment
 hi def link slimeDocType                   Identifier
@@ -92,8 +92,8 @@ hi def link slimeId                        Identifier
 hi def link slimeIdChar                    Identifier
 hi def link slimeInnerAttrString           String
 hi def link slimeInterpolationDelimiter    Delimiter
-hi def link slimeElixirChar                  Special
-hi def link slimeElixirOutputChar            Special
+hi def link slimeElixirChar                Special
+hi def link slimeElixirOutputChar          Special
 hi def link slimeText                      String
 hi def link slimeTodo                      Todo
 hi def link slimeWrappedAttrValueDelimiter Delimiter
